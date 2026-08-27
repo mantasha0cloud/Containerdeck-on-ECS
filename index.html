@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContainerDeck — ECS Fargate Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🐳 ContainerDeck</h1>
+    <p>CodeCommit → CodePipeline → CodeBuild → Docker → ECR → ECS Fargate → ALB</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Build Info</h2>
+      <p>Version: <span id="version">v1.0.0</span></p>
+      <p>Deployed At: <span id="deployTime"></span></p>
+      <p>Server Status: <span id="status" class="ok">Online</span></p>
+    </section>
+
+    <section class="card">
+      <h2>Pipeline Stages</h2>
+      <ul class="stages">
+        <li>✅ Source — CodeCommit</li>
+        <li>✅ Build — CodeBuild</li>
+        <li>✅ Test — Unit Tests</li>
+        <li>✅ Docker Build &amp; Push — ECR</li>
+        <li>✅ Deploy — ECS Fargate</li>
+        <li>✅ Traffic — Application Load Balancer</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Live Clock</h2>
+      <p id="clock" class="clock"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>ContainerDeck ECS Fargate CI/CD Practical — AWS Developer Tools Lab</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

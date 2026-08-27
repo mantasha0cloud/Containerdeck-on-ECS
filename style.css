@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #081f16;
+  color: #e2f5e9;
+}
+
+.topbar {
+  background: #10301f;
+  padding: 24px;
+  text-align: center;
+  border-bottom: 3px solid #22d3ee;
+}
+
+.topbar h1 {
+  color: #22d3ee;
+  font-size: 28px;
+}
+
+.topbar p {
+  color: #9fd8bd;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #10301f;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #1f4d34;
+}
+
+.card h2 {
+  color: #22d3ee;
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.ok {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.stages {
+  list-style: none;
+}
+
+.stages li {
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #1f4d34;
+}
+
+.stages li:last-child {
+  border-bottom: none;
+}
+
+.clock {
+  font-size: 26px;
+  font-weight: bold;
+  color: #facc15;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #5f9a7c;
+  font-size: 12px;
+}
