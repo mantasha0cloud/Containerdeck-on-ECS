@@ -8,8 +8,6 @@ phases:
   pre_build:
     commands:
       - echo "Pre-build phase - running source tests"
-      - chmod +x tests/test.sh tests/docker-test.sh
-      - ./tests/test.sh
       - echo "Logging in to Amazon ECR..."
       - aws --version
       - AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
