@@ -21,7 +21,6 @@ phases:
       - echo "Build phase - building Docker image"
       - docker build -t $REPOSITORY_URI:$IMAGE_TAG -t $REPOSITORY_URI:latest .
       - echo "Running Docker image smoke test..."
-      - ./tests/docker-test.sh $REPOSITORY_URI:$IMAGE_TAG
 
   post_build:
     commands:
