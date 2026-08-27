@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - echo "Pre-build phase - running source tests"
-      - echo "Logging in to Amazon ECR..."
+      - echo "Logging in to Amazon ECR...."
       - aws --version
       - AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
       - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_REPO_NAME
